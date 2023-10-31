@@ -1,0 +1,179 @@
+{
+  "main": {
+    "id": "2a7375d494d3857e",
+    "type": "split",
+    "children": [
+      {
+        "id": "a2a70024509bf3c5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ef2055064cb69c73",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Inbox.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1787501a783e5511",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Inbox.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b737f26844ee6644",
+    "type": "split",
+    "children": [
+      {
+        "id": "76221a300063b277",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3df2dea3fe989e3f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "5dfb6395c03ea2e6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "1476a2865e5a579a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "929573e0fb64c848",
+    "type": "split",
+    "children": [
+      {
+        "id": "95ea29042abeff5c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "14fe9aaea280e1e2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Inbox.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "fddbe57c66dffc35",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Inbox.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ee4f924e7d0752ff",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Inbox.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "1787501a783e5511",
+  "lastOpenFiles": [
+    "hardware/Watch Project.md",
+    "Micropython.md",
+    "Python.md",
+    "Readme.md",
+    "settings/command list.md",
+    "settings/keymaps.md",
+    "Inbox.md",
+    "hardware/Microelectronics I have.md",
+    "Visual Engineering.md",
+    "settings",
+    "system.md",
+    "hardware/files/iq_audio_product_guide.pdf",
+    "hardware/files/dhat_mini_schematic.pdf",
+    "hardware/files/GFX_pack_schematic.pdf",
+    "hardware/files/GC9A01A.pdf",
+    "hardware/files/CST816S_register_declaration.pdf",
+    "hardware/files/CST816S_Datasheet_EN.pdf",
+    "hardware/files/1.28inch_Touch_LCD_Schematic.pdf",
+    "hardware/files",
+    "hardware/images/rpi_zero2w.jpeg",
+    "hardware/images/pico_lipo.jpeg",
+    "hardware/images/pico_gfx_pack.jpeg",
+    "hardware/images/iqaudio_dac_plus.jpeg",
+    "hardware/images/dhat_mini.jpeg",
+    "hardware/images/dac_plus_features.png",
+    "hardware/images/128_round_touchscreen.jpeg",
+    "hardware/images/128_pinout.jpeg",
+    "hardware/images/13-round-display.jpeg",
+    "hardware/images"
+  ]
+}

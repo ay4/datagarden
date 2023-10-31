@@ -1,0 +1,11 @@
+{
+  "accentColor": "",
+  "cssTheme": "Material Gruvbox",
+  "interfaceFontFamily": "IBM Plex Sans",
+  "textFontFamily": "IBM Plex Sans",
+  "monospaceFontFamily": "IBM Plex Mono",
+  "theme": "moonstone",
+  "enabledCssSnippets": [
+    "custom_list"
+  ]
+}
