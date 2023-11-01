@@ -2,3 +2,4 @@
 - http://thedarnedestthing.com/the%20darnedest%20thing
 - https://jenson.org/text/
 - https://www.partykit.io
+- https://www.johnwordsworth.com/projects/sprite-font-builder/

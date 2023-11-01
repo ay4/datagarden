@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "a2a70024509bf3c5",
+        "id": "993479305c5d9451",
         "type": "tabs",
         "children": [
           {
-            "id": "ef2055064cb69c73",
+            "id": "5a6b1bdaf730656a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Inbox.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1787501a783e5511",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Inbox.md",
+                "file": "hardware/Watch Project.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Inbox.md",
+                "file": "hardware/Watch Project.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Inbox.md",
+                "file": "hardware/Watch Project.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +114,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Inbox.md"
+                "file": "hardware/Watch Project.md"
               }
             }
           }
@@ -140,21 +127,26 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "homepage:Open homepage": false,
       "switcher:Open quick switcher": false,
       "command-palette:Open command palette": false
     }
   },
-  "active": "1787501a783e5511",
+  "active": "5a6b1bdaf730656a",
   "lastOpenFiles": [
+    "hardware/images/inverse_PNG_demo.jpg",
+    "hardware/images/Amstrad_PC_spritesheet.jpg",
     "hardware/Watch Project.md",
-    "Micropython.md",
-    "Python.md",
+    "hardware/images/Amstrad_PC_spritesheet 1.png",
+    "hardware/images/Amstrad_PC_spritesheet.png",
     "Readme.md",
-    "settings/command list.md",
-    "settings/keymaps.md",
-    "Inbox.md",
+    "Python.md",
     "hardware/Microelectronics I have.md",
+    "Inbox.md",
+    "settings/keymaps.md",
     "Visual Engineering.md",
+    "settings/command list.md",
+    "Micropython.md",
     "settings",
     "system.md",
     "hardware/files/iq_audio_product_guide.pdf",
@@ -172,8 +164,6 @@
     "hardware/images/dhat_mini.jpeg",
     "hardware/images/dac_plus_features.png",
     "hardware/images/128_round_touchscreen.jpeg",
-    "hardware/images/128_pinout.jpeg",
-    "hardware/images/13-round-display.jpeg",
     "hardware/images"
   ]
 }

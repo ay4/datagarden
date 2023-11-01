@@ -1,7 +1,7 @@
 > [!INFO] Also see
 > [[Micropython]], [[Watch Project]]
 # Audio and Video
-## IQaudIO DAC+
+## IQaudIO DAC+ (Pi & Zero)
 
 ![img](./images/iqaudio_dac_plus.jpeg)
 
@@ -37,7 +37,7 @@ Those looking for the best possible audio quality should consider the [IQaudIO D
 -   [Product Guide](./files/iq_audio_product_guide.pdf)
 
 # Screens
-## Pico GFX Pack
+## Pico GFX Pack (Pico)
 
 ![img](./images/pico_gfx_pack.jpeg)
 
@@ -75,7 +75,7 @@ The Qw/ST connector on Pico GFX Pack makes it super easy to connect up [Qwiic or
 Breakout Garden breakouts that don't have a Qw/ST connector can be connected using a JST-SH to JST-SH cable plus a Qw/ST to Breakout Garden adaptor. Want to use >2 breakouts at the same time? Try [this adaptor](https://thepihut.com/products/sparkfun-qwiic-multiport)!
 
 -   [List of breakouts](https://github.com/pimoroni/pimoroni-pico) currently compatible with our C++/MicroPython build.
-## Display HAT Mini
+## Display HAT Mini (Pi & Zero)
 
 ![img](./images/dhat_mini.jpeg)
 
@@ -102,7 +102,7 @@ If you have a [Breakout Garden breakout](https://thepihut.com/collections/pimoro
 -   The buttons are close to the edge of the screen, so it's worth taking a bit of care when pressing the buttons that you're not also pressing down on the screen, particularly at the edge with the ribbon cable.
 -   Please note that because of Display HAT Mini's extra size, it will overhang adjacent slots on expansion boards like pHAT Stack, Black HAT Hacker, HAT Hacker HAT and Flat HAT Hacker. No shame - every HAT is valid, every HAT is beautiful.
 -   We've found two standoffs to be sufficient to keep this HAT firmly in place, but if you want to add standoffs at every corner of your Zero so you can use it to stop a tank or something you can pick up standoffs here (10mm might be best)
-## 1.3" SPI Colour Round LCD (240x240)
+## 1.3" SPI Colour Round LCD (Any)
 
 ![img](./images/13-round-display.jpeg)
 
@@ -151,7 +151,7 @@ If you'd rather wire them up to a Pico directly, here's how it goes!
 -   DC to GP16
 -   BL to GP20
 -   GND to any ground pin
-## 1.28" Round Touchscreen LCD Display
+## 1.28" Round Touchscreen LCD Display (Any)
 
 ![img](./images/128_round_touchscreen.jpeg)
 
