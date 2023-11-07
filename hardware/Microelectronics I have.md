@@ -189,6 +189,15 @@ We also offer a [non-touch version](https://thepihut.com/products/round-1-28-lcd
 -   GND	Ground
 
 
+## Pico Enviro Pack
+![[pimoroni_pico_enviro.jpeg]]
+- [PicoGraphics function reference](https://github.com/pimoroni/pimoroni-pico/tree/main/micropython/modules/picographics)
+- [MicroPython examples](https://github.com/pimoroni/pimoroni-pico/tree/main/micropython/examples/pico_enviro)
+- [MicroPython PMS5003 driver](https://github.com/pimoroni/pms5003-micropython)
+- BME688 4-in-1 temperature, pressure, humidity and gas sensor ([datasheet](https://cdn.shopify.com/s/files/1/0174/1800/files/bst-bme688-ds000.pdf?v=1620834794))
+- LTR-559 light and proximity sensor ([datasheet](https://optoelectronics.liteon.com/upload/download/ds86-2013-0003/ltr-559als-01_ds_v1.pdf))
+- MEMS microphone ([datasheet](https://www.mouser.com/datasheet/2/218/SPU0410HR5H-PB_revH-876884.pdf))
+- [C/C++ and MicroPython libraries](https://github.com/pimoroni/pimoroni-pico)
 # Microcontrollers
 ## Raspberry Pi Zero 2 W
 
@@ -244,3 +253,12 @@ You can also use CircuitPython on your Pico LiPo! CircuitPython is an easy to us
 
 The power button can also be used as a reset button. Just double press it to cut and reinstate the power whilst holding down the BOOTSEL button on the Pico LiPo to get into bootloader mode, with no plugging and unplugging of cables required.
 
+
+# Other
+## Real-time-clock (Adafruit DS3231 Precision)
+![[adafruit_ds3231.jpg]]
+-  A coin cell is required to use the battery-backup capabilities! We don't include one by default, to make shipping easier for those abroad, [but we do stock them so pick one up or use any CR1220 you have handy.](https://thepihut.com/products/cr1220-12mm-diameter-3v-lithium-coin-cell-battery)
+- Just wire up to your favorite micro and you can use our CircuitPython/Python or [Arduino drivers](https://github.com/adafruit/Adafruit_DPS310) to easily interface with the DS3231
+- [Check out our detailed tutorial for pinouts, assembly, wiring & code for both Arduino and CircuitPython, and more!](https://learn.adafruit.com/adafruit-ds3231-precision-rtc-breakout/)
+- Specifically, the [python page is here](https://learn.adafruit.com/adafruit-ds3231-precision-rtc-breakout/circuitpython). **BUT!** It's CircuitPython
+- Micropython seems to be supported via [this module](https://micropython-urtc.readthedocs.io/en/latest/)

@@ -95,7 +95,9 @@ So, Pimoroni **don't support Unicode** and I will have to do everything with spr
 
 I made an Amstrad PC sprite sheet by hand in Pixelmator using my own character order. This font is [represented atint10h](https://int10h.org/oldschool-pc-fonts/fontlist/font?amstrad_pc). It's a 8x8 font that is supposed to be universal. Besides other things, it can be used for box graphics.  The others might be shorter with just the characters, numbers and the : sign (for clocks). 
 
-I should probably continue with [IBM VGA 8x16](https://int10h.org/oldschool-pc-fonts/fontlist/font?ibm_vga_8x16#-) for a larger font within the same widths. Some interest is there for [ToshibaSat 8x16](https://int10h.org/oldschool-pc-fonts/fontlist/font?toshibasat_8x16#-) Также [Rainbow 100](https://int10h.org/oldschool-pc-fonts/fontlist/font?rainbow100_re_80#-) представляет интерес из-за матрицы 10x10.
+I should probably continue with [IBM VGA 8x16](https://int10h.org/oldschool-pc-fonts/fontlist/font?ibm_vga_8x16#-) (**✓ DONE**) for a larger font within the same widths. Some interest is there for [ToshibaSat 8x16](https://int10h.org/oldschool-pc-fonts/fontlist/font?toshibasat_8x16#-) Также [Rainbow 100](https://int10h.org/oldschool-pc-fonts/fontlist/font?rainbow100_re_80#-) представляет интерес из-за матрицы 10x10.
+
+Look for everything at `/Users/neiaglov/hardware/yesno/fonts`
 
 ## Icons
 
@@ -158,3 +160,84 @@ png.open_file("test2.png")
 png.decode(0, 0)
 display.update()
 ```
+# Architectural Notes
+## Dealing with Sprite Fonts
+
+### ayTextStyle Class
+
+Passed a font folder, scale, something else?..
+
+``` python
+IBM_large=ayTextStyle("/fonts/ibm_8x16", 1, screen_width, screen_height)
+```
+
+When an object is created in this way, `init` calls an internal function, `loadfont("/fonts/ibm_8x16")`, which:
+- Checks the font file and font config are in place
+- Tries to read the config and see if the sprite sheet is needed size and all
+- Forms the class variable, `font_matrix` which is a dictionary so that `font_matrix['a']=(5,4,7,8)` where `'a'` is the character and `(5,4,7,8)` are its coordinates, width and height for the pngdecode to print. Quick ref: `png.decode(0, 0, source=(32, 48, 24, 16), scale=(4, 4), rotate=0) # The source argument is the region, in pixels, you want to show from the PNG- offset left and top, plus width and height.` From [here](https://github.com/pimoroni/pimoroni-pico/releases/tag/v1.20.4).
+
+#### No-problem printing: pr_pr
+ayTextStyle should provide nice functions. `pretty_print` or `pr_pr` should simply print the text at the same position (and with the same parameters) it started from last time:
+
+``` python
+IBM_large.pr_pr("Hello there")
+```
+
+- For this, an variables `print_start_x, print_start_y, print_break, print_alignment, print_rotation ` should be set
+- Should probably return something nice, like a tuple with coordinates of the last letter (for convenience, `x` should be the letter's end and `y` — the letters top, so that other printing functions could take it from there).
+
+#### Yes-problem printing: long_pr
+`long_pr` is inspired by the printing function of Pimoroni:
+
+``` python
+IBM_large.long_pr(text, start_x, start_y, break, align, rotation)
+```
+
+where:
+- `start_x` (optional, defaults to `0`) — coordinate to start writing text
+- `start_y` (optional, defaults to `0`) — coordinate to start writing text
+- `break` (optional, defaults to screen width/height): amount of pixels after which start wrapping
+- `align` (optional, defaults to `left`): `left`, `right` or `justify`
+- `rotation`: (optional defaults to 0): `0`, `90`, `180` or `270`
+
+I suppose I must start with `start_x`, `start_y` and `break` and then add all the other stuff.
+
+Notably, this function should set the internal class variables `print_start_x, print_start_y, print_break, print_alignment, print_rotation ` so that `pr_pr` could use 'em later.
+
+#### Independent style setting
+The class should probably give independent access to variables for convenience, so that such things are possible:
+
+``` python
+IBM_large.justify=right
+pr_pr("Hello there") # Justifies right
+```
+
+### ayErrorLog and ayDebugLog
+
+``` python
+el=ayErrorLog(screen_width, screen_height)
+dl=ayDebugLog(screen_width, screen_height)
+```
+
+Then the following must be possible:
+
+```
+el.error("Your screen is too soft")
+```
+
+The class should decide by itself what to do with that with the default behaviour being clear the screen, write the error and set the class variable that the main loop will check to terminate the program:
+
+``` python
+if el.terminal:
+	break
+```
+
+As for debug, the following must be possible:
+
+``` python
+dl.log("Starting the couroutine")
+```
+
+The `log` function should be clever enough to:
+- Add the name of the function it was called from
+- Decide by itself (based on class variables) if it should print something to the console or to the real file log or not print at all.
