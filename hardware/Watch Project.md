@@ -1,26 +1,30 @@
 > [!INFO] Also see
 > [[Micropython]], [[Microelectronics I have]]
-# Quick Links
+# CircuitPython Attempts
 
--  [Pico Graphics Docs](https://github.com/pimoroni/pimoroni-pico/tree/main/micropython/modules/picographics)
+- Based on [this order from Adafruit](https://www.adafruit.com/index.php?main_page=account_history_info&order_id=3168554)
+# Micropython Attempts
+## Quick Links
+
+- [Pico Graphics Docs](https://github.com/pimoroni/pimoroni-pico/tree/main/micropython/modules/picographics)
 - [Pico GFX Examples](https://github.com/pimoroni/pimoroni-pico/tree/main/micropython/examples/gfx_pack)
 - [GFX Pack Docs](https://github.com/pimoroni/pimoroni-pico/blob/main/micropython/modules_py/gfx_pack.md)
-# Research
-## General
+## Research
+### General
 
 [Pimoroni Pico Lipo](https://shop.pimoroni.com/products/pimoroni-pico-lipo?variant=39386149093459) that I'm planning to use for this project has their own [firmware](https://github.com/pimoroni/pimoroni-pico/releases).
-## Bitmap Fonts
+### Bitmap Fonts
 
 - Lipo firmware has two related posts: one is regarding [vector fonts](https://github.com/pimoroni/pimoroni-pico/releases/tag/v1.20.5), the [other](https://github.com/pimoroni/pimoroni-pico/releases/tag/v1.20.3) has to do with their custom [font drawing utility](https://github.com/gadgetoid/pgfutil) (which is of little use to me).
 - Someone did a great 8x4 [bitmap font called Miniwi](https://github.com/a780201/miniwi). 
 - There's a [great website](https://int10h.org) that hosts many of authentic retro fonts, including [some](https://int10h.org/oldschool-pc-fonts/fontlist/font?ibm_bios#-) with Cyrillic support.
 
-## Data over audio
+### Data over audio
 
 - [Pico Lipo](https://shop.pimoroni.com/products/pimoroni-pico-lipo?variant=39386149093459) doesn't have any wireless connectivity, so it's still a question of how to sync it with anything that knows anything about, say, the weather. I would love to do this in a modem-like fashion over audio, but so far I was only able to find [[Python#Transferring data over audio|Python libraries]] that work to that end—and not Micropython.
 
-# Experiments
-## Vector fonts
+## Experiments
+### Vector fonts
 
 Vector fonts do work! Here's the purest example notably dependent on using a non-RGB screen and the font file in the [all-right format](https://github.com/lowfatcode/alright-fonts) available in the root of Pi. They're also pretty quick.
 
@@ -71,7 +75,7 @@ display.update()
 
 ```
 
-## Custom fonts
+### Custom fonts
 
 After
 ```sh
@@ -86,7 +90,7 @@ I was able to simply clone the [alright-fonts repository](https://github.com/low
 ```
 
 
-## Cyrillic (and box art) support
+### Cyrillic (and box art) support
 It even showed me that Cyrillic characters are being properly converted! However, I wasn't able to output any of them. Also, it doesn't allow to change the character table. The bitmap fonts are also not an option as they are custom.
 
 So, Pimoroni **don't support Unicode** and I will have to do everything with spritesheets I guess. With this in mind, PNG [sprite sheets are explained here](https://github.com/pimoroni/pimoroni-pico/releases/tag/v1.20.4).
@@ -99,7 +103,7 @@ I should probably continue with [IBM VGA 8x16](https://int10h.org/oldschool-pc-f
 
 Look for everything at `/Users/neiaglov/hardware/yesno/fonts`
 
-## Icons
+### Icons
 
 In the future, it might make sense to also look at the following icon sets:
 - [Fontawesome](https://fontawesome.com/icons)
@@ -111,7 +115,7 @@ In the future, it might make sense to also look at the following icon sets:
 However they all work best with hinting which I don't have.
 
 
-## First PNG test
+### First PNG test
 
 I was able to successfully show an (uploaded) PNG file on Pico called test.png. It has transparent background and **white** symbols that show as black symbols on my monochrome display. Here's the code:
 
@@ -133,7 +137,7 @@ display.update()
 ```
 
 **Importantly,** on the monochrome display it seems that 'black' is background, while 'white' shows up as black.
-## Inverse alpha PNG work!!
+### Inverse alpha PNG work!!
 
 ![[inverse_PNG_demo.jpg]]
 
@@ -160,10 +164,10 @@ png.open_file("test2.png")
 png.decode(0, 0)
 display.update()
 ```
-# Architectural Notes
-## Dealing with Sprite Fonts
+## Architectural Notes
+### Dealing with Sprite Fonts
 
-### ayTextStyle Class
+#### ayTextStyle Class
 
 Passed a font folder, scale, something else?..
 
@@ -176,7 +180,7 @@ When an object is created in this way, `init` calls an internal function, `loadf
 - Tries to read the config and see if the sprite sheet is needed size and all
 - Forms the class variable, `font_matrix` which is a dictionary so that `font_matrix['a']=(5,4,7,8)` where `'a'` is the character and `(5,4,7,8)` are its coordinates, width and height for the pngdecode to print. Quick ref: `png.decode(0, 0, source=(32, 48, 24, 16), scale=(4, 4), rotate=0) # The source argument is the region, in pixels, you want to show from the PNG- offset left and top, plus width and height.` From [here](https://github.com/pimoroni/pimoroni-pico/releases/tag/v1.20.4).
 
-#### No-problem printing: pr_pr
+##### No-problem printing: pr_pr
 ayTextStyle should provide nice functions. `pretty_print` or `pr_pr` should simply print the text at the same position (and with the same parameters) it started from last time:
 
 ``` python
@@ -186,7 +190,7 @@ IBM_large.pr_pr("Hello there")
 - For this, an variables `print_start_x, print_start_y, print_break, print_alignment, print_rotation ` should be set
 - Should probably return something nice, like a tuple with coordinates of the last letter (for convenience, `x` should be the letter's end and `y` — the letters top, so that other printing functions could take it from there).
 
-#### Yes-problem printing: long_pr
+##### Yes-problem printing: long_pr
 `long_pr` is inspired by the printing function of Pimoroni:
 
 ``` python
@@ -204,7 +208,7 @@ I suppose I must start with `start_x`, `start_y` and `break` and then add all th
 
 Notably, this function should set the internal class variables `print_start_x, print_start_y, print_break, print_alignment, print_rotation ` so that `pr_pr` could use 'em later.
 
-#### Independent style setting
+##### Independent style setting
 The class should probably give independent access to variables for convenience, so that such things are possible:
 
 ``` python
@@ -212,7 +216,7 @@ IBM_large.justify=right
 pr_pr("Hello there") # Justifies right
 ```
 
-### ayErrorLog and ayDebugLog
+#### ayErrorLog and ayDebugLog
 
 ``` python
 el=ayErrorLog(screen_width, screen_height)

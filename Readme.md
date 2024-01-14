@@ -8,5 +8,9 @@ Not an engineer. Nevertheless, from time to time I like coding in [[Python]] (an
 
 I'm starting a hardware hobby (so I think). 
 
-- So far, I am keeping a [[Microelectronics I have]] page.
 - I am also thinking of making a primitive [[Watch Project|Smart Watch]]
+- Did an exploration of a [[Smol Diaring Tablet|7" Touchscreen plus rpi zero]]
+
+# Design
+
+- Favourite [[Color Palettes]]

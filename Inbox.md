@@ -1,5 +1,14 @@
-- [[https://thomasbaart.nl/2018/11/26/corne-keyboard-helidox-build-log/][Corne Keyboard (Helidox) build log – Thomas Baart]]
-- http://thedarnedestthing.com/the%20darnedest%20thing
-- https://jenson.org/text/
-- https://www.partykit.io
-- https://www.johnwordsworth.com/projects/sprite-font-builder/
+- https://github.com/fathyb/carbonyl — text-based browser like browsh
+- http://oldvcr.blogspot.com/2022/01/prior-art-dept-owl-guide-early.html - Hypertext systems in dos and generally interesting
+- https://webring.xxiivv.com
+	- Good ones:
+	- https://craze.co.uk - type designer, non-Linux tools
+	- Stopped at #30 now
+- https://www.partykit.io - work, ai
+- https://github.com/42wim/matterbridge - bridge between mattermost, IRC, gitter, xmpp, slack, discord, telegram, rocket.chat, steam, twitch, ssh-chat, zulip, whatsapp, keybase and matrix with REST API
+- https://www.liquidtext.net - PDF Editor with Superpowers
+- https://www.fleetingnotes.app/ - One approach to syncing Obsidian
+- https://plugins.getnikola.com - to make a static wiki out of org-files in python
+- https://kiwix.org/en/ - software fr offline wikipedia etc
+- https://www.visme.co/ - Office alternative, try
+- zimaboard.com - Потенциально dos-машина

@@ -4,22 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "940dd092e0aa0dbc",
+        "id": "fbce501b75f25c54",
         "type": "tabs",
         "children": [
           {
-            "id": "ace624e512b8e212",
+            "id": "116eb6b99f1ca686",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "hardware/Microelectronics I have.md",
+                "file": "Blogs.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "90cb2ee7b956589e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Inbox.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f01f899d1ccd8eb9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Inbox.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -85,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "hardware/Microelectronics I have.md",
+                "file": "Inbox.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "hardware/Microelectronics I have.md",
+                "file": "Inbox.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -114,7 +139,18 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "hardware/Microelectronics I have.md"
+                "file": "Inbox.md"
+              }
+            }
+          },
+          {
+            "id": "874f4b8072dbc54f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
               }
             }
           }
@@ -128,44 +164,52 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "homepage:Open homepage": false,
+      "templates:Insert template": false,
       "switcher:Open quick switcher": false,
       "command-palette:Open command palette": false,
       "canvas:Create new canvas": false
     }
   },
-  "active": "ace624e512b8e212",
+  "active": "f01f899d1ccd8eb9",
   "lastOpenFiles": [
+    "Blogs.md",
+    "Inbox.md",
+    "Readme.md",
+    "hardware/Smol Diaring Tablet.md",
+    "programming/Python.md",
+    "Installing DOS.md",
+    "Good Tools.md",
+    "Subscriptions.md",
     "hardware/Watch Project.md",
-    "Micropython.md",
+    "reading",
+    "Untitled.canvas",
+    "design/Color Palettes.md",
+    "hardware/Microelectronics I have.md",
+    "design/random_palette.jpeg",
+    "design",
+    "settings/keymaps.md",
+    "settings/command list.md",
+    "programming/Visual Engineering.md",
+    "hardware/images/adafruit_keymatrix_gpio_expander.jpeg",
+    "programming/CircuitPython.md",
+    "programming/Micropython.md",
+    "programming/files/Welcome to CircuitPython.pdf",
+    "Wecome to CircuitPython.pdf.md",
+    "programming/files/CircuitPython Essentials.pdf",
+    "programming/files",
+    "programming",
     "hardware/images/adafruit_ds3231.jpg",
     "resizer/adafruit-ds3231-precision-rtc-stemma-qt-adafruit-ada5188-29271690838211_1000x.jpg",
-    "hardware/Microelectronics I have.md",
     "hardware/images/pimoroni_pico_enviro.jpeg",
     "resizer",
-    "Untitled.canvas",
     "hardware/images/inverse_PNG_demo.jpg",
     "hardware/images/Amstrad_PC_spritesheet.jpg",
     "hardware/images/Amstrad_PC_spritesheet 1.png",
     "hardware/images/Amstrad_PC_spritesheet.png",
-    "Readme.md",
-    "Python.md",
-    "Inbox.md",
-    "settings/keymaps.md",
-    "Visual Engineering.md",
-    "settings/command list.md",
     "settings",
     "system.md",
     "hardware/files/iq_audio_product_guide.pdf",
     "hardware/files/dhat_mini_schematic.pdf",
-    "hardware/files/GFX_pack_schematic.pdf",
-    "hardware/files/GC9A01A.pdf",
-    "hardware/files/CST816S_register_declaration.pdf",
-    "hardware/files/CST816S_Datasheet_EN.pdf",
-    "hardware/files/1.28inch_Touch_LCD_Schematic.pdf",
-    "hardware/files",
-    "hardware/images/rpi_zero2w.jpeg",
-    "hardware/images/pico_lipo.jpeg",
-    "hardware/images/pico_gfx_pack.jpeg"
+    "hardware/images/rpi_zero2w.jpeg"
   ]
 }

@@ -6,11 +6,11 @@
   "backlink": true,
   "canvas": true,
   "outgoing-link": true,
-  "tag-pane": false,
+  "tag-pane": true,
   "properties": false,
   "page-preview": true,
   "daily-notes": false,
-  "templates": false,
+  "templates": true,
   "note-composer": true,
   "command-palette": true,
   "slash-command": false,
@@ -26,5 +26,5 @@
   "workspaces": false,
   "file-recovery": true,
   "publish": false,
-  "sync": false
+  "sync": true
 }
